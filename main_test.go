@@ -31,4 +31,6 @@ func TestRecipesHandlerCRUD_Integration(t *testing.T) {
 	// CREATE - add a new recipe
 	req := httptest.NewRequest(http.MethodPost, "/recipes", hamAndCheeseReader)
 	w := httptest.NewRecorder()
+	recipesHandler.ServerHTTP(w, req)
+
 }
