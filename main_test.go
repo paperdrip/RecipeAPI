@@ -14,7 +14,7 @@ import (
 
 func readTestData(t *testing.T, name string) []byte {
 	t.Helper()
-	content, err := os.ReadFile("../../testdata/" + name)
+	content, err := os.ReadFile("./testdata/" + name)
 	if err != nil {
 		t.Errorf("Cound not read %v", name)
 	}
