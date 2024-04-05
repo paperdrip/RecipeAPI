@@ -40,7 +40,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           outputs: "type=registry, push=true"
-          platforms: linux/amd64,linux/armv6,linux/arm64
+          platforms: linux/amd64,linux/arm64
           build-args: |
             Version=${{ env.TAG }}
             GitCommit=${{ github.sha }}
